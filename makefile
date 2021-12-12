@@ -1,5 +1,5 @@
 install:
-	@gcc cuby.c -o cuby
+	@gcc source-code/cuby.c -o cuby
 	@mkdir algorithms
 	@chmod +x script.sh
 	@./script.sh
