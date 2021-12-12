@@ -24,7 +24,7 @@ void createListes(node elem,node** q){
 }
 node* configFile(char* file, int* listLength){
 
-	node* list;
+	node* list = NULL;
 	node e;
 	char* token;
 	int i = 0;
