@@ -5,6 +5,7 @@
 
 int queueIndex = 0;
 
+		
 void removeFromListe(node **list,int index){
 	node * headHolder = *list;
 	if(index == 0){
@@ -27,20 +28,19 @@ void insertHead(node elem,node** q){
 	new->next = *q;
 	*q = new;
 }
-
-node* SearchMinimumCpuTime(node* list){
+node* SearchMaxPriority(node* list){
 	int counter = 0;
-	node *min = list;
+	node *max = list;
 	node* p = list;
 	while(p!=NULL){
-		if(min->cpuTime > p->cpuTime){
-			min = p;
+		if(max->priority < p->priority){
+			max = p;
 			queueIndex = counter;
 		}
 		counter++;
 		p = p->next;
 	}
-	return min;
+	return max;
 }
 void main(int argc,char* argv[]){
 		int listLength = 0;
@@ -108,12 +108,12 @@ void main(int argc,char* argv[]){
 				}
 			}
 
-			//search min
-			node *min;
-			min = SearchMinimumCpuTime(queue);
-			sortedTab[count] = *min;
-			timeStamp = timeStamp + min->cpuTime;
-			printf("the process %s has completed his CPU time and left at %d\n",min->name,timeStamp);
+			//search max
+			node *max;
+			max = SearchMaxPriority(queue);
+			sortedTab[count] = *max;
+			timeStamp = timeStamp + max->cpuTime;
+			printf("the process %s has completed his CPU time and left at %d\n",max->name,timeStamp);
 			removeFromListe(&queue,queueIndex);
 			queueIndex = 0;
 			++count;

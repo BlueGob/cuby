@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
 struct node
 {
 	char name[50];
@@ -122,4 +124,90 @@ void ganttDiagram(node tab[],int listLength){
 					printf("%d",x);
 				}
 				printf("\n");
+}
+void printProcessTable(char* file){
+	int listLength = 0; 
+	char buffer[10];
+	node* list = configFile(file,&listLength);
+	char* tab[4]= {"name","priority","arrivalTime","cpuTime"};
+	printf(" ");
+	for (int i = 0; i < 4; ++i)
+	{
+		for (int j = 0; j < strlen(tab[i]); ++j)
+		{
+			printf("_");
+		}
+		printf(" ");
+	}
+	printf("\n");
+	printf("|");
+	for (int i = 0; i < 4; ++i)
+	{
+		printf("%s",tab[i]);
+		printf("|");
+	}
+	printf("\n");
+	for (int i = 0; i < 4; ++i)
+	{
+		printf("|");
+		for (int j = 0; j < strlen(tab[i]); ++j)
+		{
+			printf("_");
+		}
+	}
+	printf("|");
+	printf("\n");
+	int x = 0;
+	for (int i = 0; i < listLength; ++i)
+	{
+		
+			printf("|");
+			printf("%s",list->name);
+			for (int k = 0; k < strlen(tab[x])-strlen(list->name); ++k)
+			{
+				printf(" ");
+			}
+			printf("|");
+			printf("  ");
+			printf("%d",list->priority);
+			sprintf(buffer,"%d",list->priority);
+			x++;
+			for (int k = 0; k < strlen(tab[x])-strlen(buffer)-2; ++k)
+			{
+				printf(" ");
+			}
+			printf("|");
+			printf("  ");
+			printf("%d",list->arrivalTime);
+			sprintf(buffer,"%d",list->arrivalTime);
+			x++;
+			for (int k = 0; k < strlen(tab[x])-strlen(buffer)-2; ++k)
+			{
+				printf(" ");
+			}
+			printf("|");
+			printf("  ");
+			printf("%d",list->cpuTime);
+			sprintf(buffer,"%d",list->cpuTime);
+			x++;
+				for (int k = 0; k < strlen(tab[x])-strlen(buffer)-2; ++k)
+			{
+				printf(" ");
+			}
+			printf("|");
+			printf("\n");
+			x= 0;
+		
+		list = list ->next;
+	}
+	for (int i = 0; i < 4; ++i)
+	{
+		printf("|");
+		for (int j = 0; j < strlen(tab[i]); ++j)
+		{
+			printf("_");
+		}
+	}
+		printf("|");
+	printf("\n");
 }

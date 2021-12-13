@@ -65,7 +65,8 @@ void main(int argc,char* argv[]){
 	   				  	}else if(strcmp(choice,"menu")==0){
 	   				  		menu();
 	   				  	}else if(strcmp(choice,"config")==0){
-	   				  		system("cat config.conf");
+	   				  		//system("cat config.conf");
+	   				  		printProcessTable(argv[1]);
 	   				  	}else if(atoi(choice)!=0){
 	   				  		if(atoi(choice)>j-1){
 	   				  			printf("invalid choice, choose between 1 and %d \n",j-1);
