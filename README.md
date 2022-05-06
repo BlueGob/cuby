@@ -1,5 +1,5 @@
 # cuby
-this is an alogrithm for sorting processes based on config file and using algorithms fifo/sjf/round robin/..
+this is an alogrithm for scheduling processes based on config file and using algorithms fifo/sjf/round robin/..
 this project is developped using make file and C under linux.
 i love to call it cuby 👊
 ## installation
@@ -31,10 +31,10 @@ after that you can type **help** to see what cuby has to offer
 ![2022-05-06_15-38](https://user-images.githubusercontent.com/59932913/167206087-a53db4ac-a3a4-4fcb-9b9a-999f03430bda.png)
 
 so we have
-- menu: to display the available sorting algorithms
+- menu: to display the available cpu scheduling algorithms  
 - clear : to clear screen
 - config : to display the config file
-- 1 .. n : to choose one between the sorting algorithms
+- 1 .. n : to choose one between the cpu scheduling algorithms 
 
 For exemple we choose the first algorithm 
 
@@ -58,7 +58,7 @@ and
 ```
 make update
 ```
-this commande will recompile the source code in case you change something or you add new sorting process algorithm
+this commande will recompile the source code in case you change something or you add new cpu scheduling algorithm
 
 ### add your algorithm
 
