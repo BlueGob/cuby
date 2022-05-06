@@ -60,7 +60,7 @@ make update
 ```
 this commande will recompile the source code in case you change something or you add new sorting process algorithm
 
-### add you algorithm
+### add your algorithm
 
 you can add your own algorithms inside source code and update with **make update** and it will be automatically added in the menu
 
