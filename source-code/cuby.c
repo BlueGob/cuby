@@ -14,7 +14,7 @@ char* choice_tab[10];
 void Greeting(){
 	int width = 70;
 	printf("%40s  ______  __    __  .______   ____    ____  \n%40s /      ||  |  |  | |   _  \\  \\   \\  /   / \n%40s|  ,----'|  |  |  | |  |_)  |  \\   \\/   / \n%40s|  |     |  |  |  | |   _  <    \\_    _/ \n%40s|  `----.|  `--'  | |  |_)  |     |  |     \n%40s \\______| \\______/  |______/      |__|     \n\n\n"," "," "," "," "," "," ");
-	printf("Welcome to our small operating system CUBY,for now cuby will sort the processes based on sorting algorithms,\nThis os is made for education purpose by Moslem GANNOUN & Ons CHAHED a two 1st year engineer students in ISI  \n");
+	printf("Welcome to my small sorting processes algorithm that i love to call it CUBY,,\n");
 }
 
 void getAlgorithms()
@@ -37,7 +37,7 @@ void menu(){
 void main(int argc,char* argv[]){
 	 node e; 
 	 int exit = 0;
-	 char command[] = "";
+	 char command[40]=" " ;
 	 char choice[20];
 	if(argc == 2){
 		system("clear");
@@ -65,7 +65,6 @@ void main(int argc,char* argv[]){
 	   				  	}else if(strcmp(choice,"menu")==0){
 	   				  		menu();
 	   				  	}else if(strcmp(choice,"config")==0){
-	   				  		//system("cat config.conf");
 	   				  		printProcessTable(argv[1]);
 	   				  	}else if(atoi(choice)!=0){
 	   				  		if(atoi(choice)>j-1){
