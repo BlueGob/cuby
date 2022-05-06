@@ -13,9 +13,11 @@ this command will compile all the source code in source-code folder and create a
 ## how to use
 
 ### config file
-cuby need a config file to work it's called ** config.conf** in which we define the processes.
+cuby need a config file to work it's called **config.conf** in which we define the processes.
+
 you need to put one process per line in this order **name-priority-arrivalTime-cpuTime** and don't forget the **-** between each attribute
 for exemple : p1-1-0-5
+
 *note*: you can put comments inside config file with # as the first caracter in the line
 
 ### run
