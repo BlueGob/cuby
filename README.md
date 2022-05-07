@@ -8,7 +8,7 @@ you only need to copy and paste this line to install
 ```bash
 make install
 ```
-this command will compile all the source code in source-code folder and create algorithms diractory and put all the compiled code inside of it. 
+this command will compile all the source code in source-code folder and create algorithms directory and put all the compiled code inside of it. 
 
 ## how to use
 
