@@ -21,7 +21,7 @@ for exemple : p1-1-0-5
 *note*: you can put comments inside config file with # as the first caracter in the line
 
 ### run
-you can simply run it with :
+cuby need config file as parameter so you can simply run it with :
 
 ```
 ./cuby config.conf
