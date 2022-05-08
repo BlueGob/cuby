@@ -53,8 +53,7 @@ which i talked about in the installation
 ```
 make remove
 ```
-to remove the compiled files 
-and
+to remove the compiled files
 ```
 make update
 ```
